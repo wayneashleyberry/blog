@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>{{ .Title }} by Wayne Ashley Berry</title>
+    {{ partial "css.html" }}
+
+    <meta name="description" content="{{ .Summary }}" />
+    <meta name="author" content="Wayne Ashley Berry" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ .Summary }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@waynethebrain" />
+    <meta name="twitter:creator" content="@waynethebrain" />
+  </head>
+  <body>
+    <article>
+      <p><a href="{{ .Site.BaseURL }}">← Home</a></p>
+
+      <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+
+      <h2>{{ .Title }}</h2>
+
+      <div class="content">
+        {{ .Content }} {{ if .Params.slides }}
+        <p><a href="#">Here's a link to the slides</a></p>
+        {{ end }}
+      </div>
+
+      <footer>
+        <p>—</p>
+        <p>
+          <small
+            >The source for this website can be found at
+            <a href="https://github.com/wayneashleyberry/wayne.cloud"
+              >github.com/wayneashleyberry/wayne.cloud</a
+            >. If you found this post interesting, or wanted to say hi, you can
+            reach me on Twitter at
+            <a href="https://twitter.com/waynethebrain">@waynethebrain</a
+            >.</small
+          >
+        </p>
+      </footer>
+    </article>
+
+    <!-- 100% privacy friendly analytics -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
+  </body>
+</html>

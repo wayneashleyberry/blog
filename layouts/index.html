@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Wayne Ashley Berry</title>
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}} {{
+    partial "css.html" }}
+  </head>
+  <body>
+    {{ range where .Site.RegularPages "Section" "posts" }}
+    <article>
+      <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <summary><p>{{ .Summary }}</p></summary>
+      <br />
+    </article>
+    {{ end }}
+
+    <!-- 100% privacy friendly analytics -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
+  </body>
+</html>
