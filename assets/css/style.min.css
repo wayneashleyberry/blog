@@ -1171,6 +1171,10 @@ select {
   margin-bottom: 0;
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1188,18 +1192,6 @@ select {
   margin-bottom: 2rem;
 }
 
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1211,10 +1203,4 @@ select {
 
 .italic {
   font-style: italic;
-}
-
-@media (min-width: 768px) {
-  .md\:m-20 {
-    margin: 5rem;
-  }
 }

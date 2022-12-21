@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Wayne Ashley Berry</title>
 
-    {{ if hugo.IsProduction }}
-        {{ $css := resources.Get "css/style.min.css" }}
-        {{ $secureCSS := $css | resources.Fingerprint "md5" }}
-        <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
-    {{ else }}
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    {{ end }}
-  </head>
-  <body>
-    <main class="container mx-auto">
-      {{ range where .Site.RegularPages "Section" "posts" }}
-      <article class="mt-8 mb-12">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Wayne Ashley Berry</title>
+
+  {{ if hugo.IsProduction }}
+  {{ $css := resources.Get "css/style.min.css" }}
+  {{ $secureCSS := $css | resources.Fingerprint "md5" }}
+  <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
+  {{ else }}
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  {{ end }}
+</head>
+
+<body>
+  <main class="container mx-auto">
+    {{ range where .Site.RegularPages "Section" "posts" }}
+    <article class="m-8">
+      <header class="mb-8">
         <h2 class="font-bold"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
-        <div class="prose">{{ .Summary }}</div>
-      </article>
-      {{ end }}
-    </main>
+      </header>
+      <div class="prose">{{ .Summary }}</div>
+    </article>
+    {{ end }}
+  </main>
 
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-  </body>
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
 </html>

@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>{{ .Title }} by Wayne Ashley Berry</title>
 
-    <meta name="description" content="{{ .Summary }}" />
-    <meta name="author" content="Wayne Ashley Berry" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Summary }}" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@waynethebrain" />
-    <meta name="twitter:creator" content="@waynethebrain" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ .Title }} by Wayne Ashley Berry</title>
 
-    {{ if hugo.IsProduction }}
-        {{ $css := resources.Get "css/style.min.css" }}
-        {{ $secureCSS := $css | resources.Fingerprint "md5" }}
-        <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
-    {{ else }}
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    {{ end }}
-  </head>
-  <body>
-    <main class="container mx-auto">
+  <meta name="description" content="{{ .Summary }}" />
+  <meta name="author" content="Wayne Ashley Berry" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Summary }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@waynethebrain" />
+  <meta name="twitter:creator" content="@waynethebrain" />
+
+  {{ if hugo.IsProduction }}
+  {{ $css := resources.Get "css/style.min.css" }}
+  {{ $secureCSS := $css | resources.Fingerprint "md5" }}
+  <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
+  {{ else }}
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  {{ end }}
+</head>
+
+<body>
+  <main class="container mx-auto">
+    <article class="m-8">
       <header class="mb-8">
         <h2 class="font-bold">{{ .Title }}</h2>
         <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
       </header>
 
       <div class="prose">{{ .Content }}</div>
+    </article>
 
-      {{ if .Params.slides }}
-        <p><a href="#">Here's a link to the slides</a></p>
-      {{ end }}
+    {{ if .Params.slides }}
+    <p><a href="#">Here's a link to the slides</a></p>
+    {{ end }}
 
-    </main>
+  </main>
 
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript> 
-  </body>
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
 </html>
