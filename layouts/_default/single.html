@@ -25,11 +25,8 @@
 
 <body>
   <main class="container mx-auto">
-    <article class="m-8">
-      <header class="mb-8">
-        <h2 class="font-bold">{{ .Title }}</h2>
-        <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
-      </header>
+    <article class="mb-16">
+      <h1 class="font-bold mt-16 mb-8">{{ .Title }}</h1>
 
       <div class="prose">{{ .Content }}</div>
     </article>

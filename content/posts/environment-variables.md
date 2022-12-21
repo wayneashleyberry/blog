@@ -18,7 +18,7 @@ godotenv -f .env go run main.go
 
 This speaks to the legibility of a code base, where the Go convention is to reading code over writing it. Keeping all of your environment variables in a single file or package might be a little more work up front... but it significantly reduces the energy required to comprehend an unfamiliar application. Having to search a repo for calls to `os.Getenv` or `envconfig.Parse` is very unpleasant and can get messy very quickly. Your team will be grateful for this, and your future self will probably also appreciate the work.
 
-**3. Validate soon and in a single place**
+**Validate soon and in a single place**
 
 I usually follow the command/package structure for my Go apps. Here's a quick overview of what an application might look like:
 

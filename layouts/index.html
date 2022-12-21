@@ -17,15 +17,13 @@
 
 <body>
   <main class="container mx-auto">
+    <h1 class="font-bold mt-16 mb-8">Contents</h1>
+
+    <ol class="list-decimal" start="0">
     {{ range where .Site.RegularPages "Section" "posts" }}
-    <article class="m-8">
-      <header class="mb-8">
-        <h2 class="font-bold"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
-      </header>
-      <div class="prose">{{ .Summary }}</div>
-    </article>
+        <li><a class="underline" href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
+    </ol>
   </main>
 
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
