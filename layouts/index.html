@@ -14,7 +14,7 @@
     {{ end }}
   </head>
   <body>
-    <div class="container mx-auto">
+    <main class="container mx-auto">
       {{ range where .Site.RegularPages "Section" "posts" }}
       <article class="mt-8 mb-12">
         <h2 class="font-bold"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -22,7 +22,7 @@
         <div class="prose">{{ .Summary }}</div>
       </article>
       {{ end }}
-    </div>
+    </main>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
