@@ -4,7 +4,7 @@ date: 2021-09-18T16:57:31+01:00
 url: "entropy-scanner"
 ---
 
-![Screenshot of the Visual Studio Code extension in action](/blog/img/entropy-scanner.png "Entropy Scanner")
+![Screenshot of the Visual Studio Code extension in action](/img/entropy-scanner.png "Entropy Scanner")
 
 I have released my first extension for Visual Studio Code!
 

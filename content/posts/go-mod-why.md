@@ -4,7 +4,7 @@ date: 2021-09-27T16:57:17+01:00
 url: "go-mod-why"
 ---
 
-![Screenshot of Dependabot alerts](/blog/img/dependabot-alerts.png "Dependabot alerts")
+![Screenshot of Dependabot alerts](/img/dependabot-alerts.png "Dependabot alerts")
 
 ---
 
