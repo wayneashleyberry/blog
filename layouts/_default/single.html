@@ -2,12 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>{{ .Title }} by Wayne Ashley Berry</title>
-    {{ partial "css.html" }}
 
     <meta name="description" content="{{ .Summary }}" />
     <meta name="author" content="Wayne Ashley Berry" />
@@ -16,20 +12,28 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@waynethebrain" />
     <meta name="twitter:creator" content="@waynethebrain" />
+
+    {{ if hugo.IsProduction }}
+        {{ $css := resources.Get "css/style.min.css" }}
+        {{ $secureCSS := $css | resources.Fingerprint "md5" }}
+        <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
+    {{ else }}
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    {{ end }}
   </head>
   <body>
-    <article>
-      <p><a href="{{ .Site.BaseURL }}">← Home</a></p>
+    <article class="container mx-auto mt-8 mb-12">
+      <header class="mb-8">
+        <h2 class="font-bold">{{ .Title }}</h2>
+        <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
+      </header>
 
-      <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+      <div class="prose">{{ .Content }}</div>
 
-      <h2>{{ .Title }}</h2>
-
-      <div class="content">
-        {{ .Content }} {{ if .Params.slides }}
+      {{ if .Params.slides }}
         <p><a href="#">Here's a link to the slides</a></p>
-        {{ end }}
-      </div>
+      {{ end }}
+
     </article>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

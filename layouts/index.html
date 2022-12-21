@@ -2,25 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Wayne Ashley Berry</title>
-    {{ with .OutputFormats.Get "rss" -}} {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />
-    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}} {{
-    partial "css.html" }}
+
+    {{ if hugo.IsProduction }}
+        {{ $css := resources.Get "css/style.min.css" }}
+        {{ $secureCSS := $css | resources.Fingerprint "md5" }}
+        <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
+    {{ else }}
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    {{ end }}
   </head>
   <body>
-    {{ range where .Site.RegularPages "Section" "posts" }}
-    <article>
-      <time>{{ .PublishDate.Format "January 2, 2006" }}</time>
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <summary><p>{{ .Summary }}</p></summary>
-      <br />
-    </article>
-    {{ end }}
+    <div class="container mx-auto">
+      {{ range where .Site.RegularPages "Section" "posts" }}
+      <article class="mt-8 mb-12">
+        <h2 class="font-bold"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <time class="font-bold text-sm italic">{{ .PublishDate.Format "January 2, 2006" }}</time>
+        <div class="prose">{{ .Summary }}</div>
+      </article>
+      {{ end }}
+    </div>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>

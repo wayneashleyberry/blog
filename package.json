@@ -1,0 +1,28 @@
+{
+  "name": "wayneashleyberry.com",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "start": "run-p \"watch:*\" --print-label",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.min.css --watch",
+    "watch:html": "hugo server -D",
+    "prod:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.min.css --minify",
+    "prod:html": "hugo --minify",
+    "prod:deploy": "firebase deploy",
+    "preprod": "rm -rf public",
+    "prod": "run-s \"prod:*\" --print-label"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayneashleyberry/wayneashleyberry.com.git"
+  },
+  "homepage": "https://github.com/wayneashleyberry/wayneashleyberry.com#readme",
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.2.4"
+  }
+}
