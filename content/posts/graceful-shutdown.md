@@ -15,7 +15,7 @@ Similarly, If you’re using Kubernetes then I’m sure you’re aware of, and h
 
 However, you might not be sure how the two work together to ensure truly zero downtime deployments — I wasn’t! This is a quick guide to writing readiness and liveness probes in Go and how to configure them with a Kubernetes rolling update deployment.
 
-## Getting started
+**_Getting started_**
 
 Let’s get started with a basic health check, to begin we’ll use it for both the readiness and liveness probes in Kubernetes. This was how I started writing services, and until you hit a significant amount of traffic, it’s probably fine.
 
@@ -57,7 +57,7 @@ readinessProbe:
 
 This will work fine, but when performing a rolling update Kubernetes will send a `SIGTERM` signal to the process and the server will die. Any open connections will fail resulting in a bad experience for users
 
-## Graceful shutdown
+**_Graceful shutdown_**
 
 There is fantastic documentation and example code for the `server.Shutdown` method on [godoc.org](https://golang.org/pkg/net/http/#Server.Shutdown). One thing to note here is that the example uses `os.Interrupt` as the shutdown signal. That’ll work when you run a server locally and hit `ctrl-C` to close it, but not on Kubernetes. Kubernetes sends a `SIGTERM` signal which is different.
 
@@ -203,7 +203,7 @@ readinessProbe:
 
 That _should_ be all you need, but I did run into an interesting problem.
 
-## Debugging
+**_Debugging_**
 
 You might run into issues, like I did, where the pod got stuck in a restart loop. Once you’ve found the pod name, you can use the describe command to see what’s going on:
 

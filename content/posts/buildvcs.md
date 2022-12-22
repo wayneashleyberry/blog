@@ -10,15 +10,15 @@ It's been 5 years since I wrote about [the most exciting feature of Go 1.8](/def
 
 Go 1.18 brings [generics](https://groups.google.com/g/golang-dev/c/iuB22_G9Kbo/m/7B1jd1I3BQAJ?pli=1), [fuzz testing](https://twitter.com/katie_hockman/status/1440082486692773897), [improved support for IP address types](https://tip.golang.org/doc/go1.18#netip) and [faster image drawing operations](https://tip.golang.org/doc/go1.18#image/draw) amongst other things. This is an impressive release, with the hype train definitely focusing on generics. However, the most exciting feature, for me at least, is that the version control information is going to automatically be embedded in compiled binaries.
 
-#### What is this useful for?
+**_What is this useful for?_**
 
 Injecting build parameters into your application provides critical data for observability. I have been adding commit hashes into logger contexts for years now. Google Cloud will read the `serviceContext` object in any log message and make use of the data in error reporting. This can provide great insight into when errors were introduced and what the error rates are for different versions of your service. I'm sure other cloud providers offer similar functionality as well.
 
-#### How have we done this in the past?
+**_How have we done this in the past?_**
 
 There have been a variety of methods for doing this before Go 1.18, there is the very handy [`govvv`](https://github.com/ahmetb/govvv) library, you could use the more recent [`embed`](https://pkg.go.dev/embed) directive. Don't forget the swiss army knife that is [`-ldflags`](https://www.digitalocean.com/community/tutorials/using-ldflags-to-set-version-information-for-go-applications), which is powerful but has brittle and complex syntax. These are perfectly fine solutions, but they all require an extra step, dependency or something else to learn. As of Go 1.18 we can do this with pure Go code and the standard toolchain.
 
-#### How do we do this now?
+**_How do we do this now?_**
 
 You'll need to install [beta 1](https://go.dev/dl/#go1.18beta1) because at the time of this post Go 1.18 is not released.
 
@@ -78,7 +78,7 @@ vcs.modified: false
 
 If you don't see the git keys, make sure that you are building or running the entire package and not a single file. I'm so used to `go run main.go` that it took me a while to figure this part out. If you read the documentation you'll see mention of the main package and main module... this implies the requirement to build a package for build information to be included.
 
-#### Build packages, not files
+**_Build packages, not files_**
 
 > "Version control information is embedded if the go command is invoked in a directory within a Git, Mercurial, Fossil, or Bazaar repository, and the `main` package and its containing main module are in the same repository. This information may be omitted using the flag `-buildvcs=false`." — https://tip.golang.org/doc/go1.18
 
@@ -90,7 +90,7 @@ go1.18beta1 run ./...
 go1.18beta1 run main.go
 ```
 
-#### Using build info with the zap logger
+**_Using build info with the zap logger_**
 
 Here's another example of how one would include this information in a logger context.
 
@@ -134,7 +134,7 @@ Running the above application will print the following:
 }
 ```
 
-#### Reproducible builds
+**_Reproducible builds_**
 
 > "Please consider omitting build time from your artifacts. It makes build reproducibility a nightmare; people are coming up with frameworks to lie to build systems about the current time. https://reproducible-builds.org" — [rollcat on hacker news](https://news.ycombinator.com/item?id=29008811)
 

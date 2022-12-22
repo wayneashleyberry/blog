@@ -7,7 +7,7 @@ summary: "I wanted to point out a few GitHub settings that were new to me. Two-f
 
 I wanted to point out a few GitHub settings that were new to me.
 
-### Account Security
+**_Account Security_**
 
 **Two-factor authentication**
 
@@ -15,7 +15,7 @@ GitHub has many options for a second authentication factor, and just as many rec
 
 https://github.com/settings/security#two-factor-summary
 
-### Security & analysis
+**_Security & analysis_**
 
 **Configure security and analysis features**
 
@@ -24,7 +24,7 @@ You can enable them by default on any new repositories, which is recommended.
 
 https://github.com/settings/security_analysis
 
-### Emails
+**_Emails_**
 
 > **Keep my email addresses private**
 >
@@ -54,7 +54,7 @@ This is a personal one, but I have subscribed to the Vulnerability newsletter, b
 
 https://github.com/settings/emails#preferences
 
-### SSH and GPG keys
+**_SSH and GPG keys_**
 
 Remember setting up a new machine and pushing your first commit? You might have forgotten to update your `git` configuration but pushed to GitHub regardless. Turns out, you can write whatever you want in your `.gitconfig` and it'll display on GitHub. SSH keys verify a secure connection to a GitHub account, but not the details associated with each commit or tag. I would encourage everyone to take a look at GPG keys and the extra level of verification they add.
 
