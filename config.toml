@@ -1,3 +1,6 @@
 baseURL = 'https://wayneashleyberry.com/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+[markup]
+  [markup.highlight]
+    style = 'github-dark'
