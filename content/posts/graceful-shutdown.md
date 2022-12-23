@@ -108,15 +108,10 @@ func main() {
 
 Now, let’s look at how we integrate graceful shutdown with the two different Kubernetes probes.
 
----
+_A quick primer on probes in Kubernetes:_
 
-A quick primer on probes in Kubernetes:
-
-_Liveness_ indicates that the pod is running, if the liveness probe fails the pod will be restarted.
-
-_Readiness_ indicates that the pod is ready to receive traffic, when a pod is ready the load balancer will start sending traffic to it.
-
----
+- _Liveness_ indicates that the pod is running, if the liveness probe fails the pod will be restarted.
+- _Readiness_ indicates that the pod is ready to receive traffic, when a pod is ready the load balancer will start sending traffic to it.
 
 Let’s go through the steps we want to happen during a rolling update.
 
@@ -249,12 +244,6 @@ var Command = &cobra.Command{
 
 Calling the liveness check as a sub-command instead of using `cat` directly sorted out my problems, hopefully that helps if you run into a similar issue.
 
----
-
 I hope this post has provided some insight into how the graceful shutdown and rolling updates can work together to achieve truly zero downtime deployments. If you have any questions, thoughts or suggestions then I’d love to hear from you!
 
-_Further reading_
-
-- [Kubernetes Container probes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes)
-- [Go `server.Shutdown` documentation](https://golang.org/pkg/net/http/#Server.Shutdown)
-- [Performing Rolling Updates](https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps)
+If you'd like to read more about this topic, I'd recommend the documentation on [Kubernetes Container probes](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes), the [`server.Shutdown` method](https://golang.org/pkg/net/http/#Server.Shutdown) in the Go standard library or Google Cloud specific documentation on [performing rolling updates](https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps).

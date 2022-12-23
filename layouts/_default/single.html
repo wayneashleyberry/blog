@@ -35,6 +35,9 @@
       {{ $related := .Site.RegularPages.Related . | first 3 }}
 
       {{ with $related }}
+        <div class="prose">
+          <hr>
+        </div>
         <h1 class="font-bold mt-16 mb-8">Related Posts</h1>
         <ul class="mb-16 font-serif">
           {{ range . }}
