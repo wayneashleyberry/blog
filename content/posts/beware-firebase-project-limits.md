@@ -19,7 +19,7 @@ Something else that isn’t communicated in the console, is that when you delete
 
 > After a 30-day waiting period, the project and associated data are permanently deleted from the console.
 
-The above statement was originally taken from a [support question](https://support.google.com/cloud/answer/6251787?hl=en) which now redirects to the official guide on [creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+_The above statement was originally taken from a [support question](https://support.google.com/cloud/answer/6251787?hl=en) which now redirects to the official guide on [creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects)._
 
 These two factors together could put you in the tricky situation I found myself in. I was stuck in limbo, unable to create new projects and unable to force delete projects waiting to be deleted.
 
