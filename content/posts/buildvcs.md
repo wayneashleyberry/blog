@@ -82,7 +82,7 @@ If you don't see the git keys, make sure that you are building or running the en
 
 **_Build packages, not files_**
 
-> "Version control information is embedded if the go command is invoked in a directory within a Git, Mercurial, Fossil, or Bazaar repository, and the `main` package and its containing main module are in the same repository. This information may be omitted using the flag `-buildvcs=false`." — https://tip.golang.org/doc/go1.18
+> Version control information is embedded if the go command is invoked in a directory within a Git, Mercurial, Fossil, or Bazaar repository, and the `main` package and its containing main module are in the same repository. This information may be omitted using the flag `-buildvcs=false`. — https://tip.golang.org/doc/go1.18
 
 ```sh
 # These will work
