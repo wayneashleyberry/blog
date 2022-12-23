@@ -17,7 +17,8 @@ So now you’re thinking, sure, that’s reasonable — what’s the big deal? I
 
 Something else that isn’t communicated in the console, is that when you delete a project it hangs around for 30 days in case you need to restore it.
 
-> After a 30-day waiting period, the project and associated data are permanently deleted from the console. — https://support.google.com/cloud/answer/6251787?hl=en
+> After a 30-day waiting period, the project and associated data are permanently deleted from the console.
+> https://support.google.com/cloud/answer/6251787?hl=en
 
 These two factors together could put you in the tricky situation I found myself in. I was stuck in limbo, unable to create new projects and unable to force delete projects waiting to be deleted.
 
