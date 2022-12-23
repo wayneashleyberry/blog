@@ -2,7 +2,7 @@
 title: "Zero downtime deployments with Go and Kubernetes"
 date: 2018-08-06T19:40:55+01:00
 url: "graceful-shutdown"
-pinned: true
+keywords: [technical, kubernetes, go]
 ---
 
 If you’re writing Go then you’re probably aware that graceful shutdown was added to the http package in 1.8.

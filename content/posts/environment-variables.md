@@ -2,6 +2,7 @@
 title: "Environment Variables & Go"
 date: 2022-04-26T16:57:31+01:00
 url: "environment-variables"
+keywords: [technical, go]
 ---
 
 I wanted to share a few tips on working with environment variables. I will be mentioning a few libraries specific to Go but the principles should apply to most languages. Keep in mind these are my opinions and come from learnings in a very specific context, feel free to disagree.

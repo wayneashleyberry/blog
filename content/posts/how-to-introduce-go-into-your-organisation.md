@@ -2,7 +2,7 @@
 title: "London Gophers - Introducing Go to your organisation"
 date: 2018-12-12T17:33:18+01:00
 url: "introduce-go"
-tags: ["Talk"]
+keywords: [technical, talk, go, london, gophers]
 ---
 
 {{< youtube mTJjj84sBmo >}}

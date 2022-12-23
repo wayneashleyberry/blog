@@ -4,3 +4,6 @@ title = 'My New Hugo Site'
 [markup]
   [markup.highlight]
     style = 'github-dark'
+[related]
+  includeNewer = true
+  threshold = 1

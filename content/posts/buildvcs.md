@@ -2,6 +2,7 @@
 title: "The Most Exciting Feature of Go 1.18"
 date: 2021-11-06T07:20:03+01:00
 url: "buildvcs"
+keywords: [technical, go]
 ---
 
 _This post was written before Go 1.18 was released, I have tried to keep the example code up to date since the beta's and final release were released._
