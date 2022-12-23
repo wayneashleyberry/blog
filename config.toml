@@ -6,4 +6,8 @@ title = 'My New Hugo Site'
     style = 'github-dark'
 [related]
   includeNewer = true
-  threshold = 1
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'keywords'
+  weight = 100

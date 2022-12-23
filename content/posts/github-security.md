@@ -2,6 +2,7 @@
 title: "Upgrade Your GitHub Security"
 date: 2021-05-14T16:57:25+01:00
 url: "github-security"
+keywords: [technical, github, security]
 summary: "I wanted to point out a few GitHub settings that were new to me. Two-factor authentication, security and analysis features, email privacy and GPG keys are fairly new and not required by default."
 ---
 

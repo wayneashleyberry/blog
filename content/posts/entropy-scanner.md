@@ -2,6 +2,7 @@
 title: "Introducing: Entropy Scanner"
 date: 2021-09-18T16:57:31+01:00
 url: "entropy-scanner"
+keywords: [technical, security, vscode, extension]
 ---
 
 ![Screenshot of the Visual Studio Code extension in action](/img/entropy-scanner.png "Entropy Scanner")

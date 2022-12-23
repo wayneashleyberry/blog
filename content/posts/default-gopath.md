@@ -2,6 +2,7 @@
 title: "The Most Exciting Feature of Go 1.8"
 date: 2016-10-31T19:43:42+01:00
 url: "default-gopath"
+keywords: [technical, go]
 ---
 
 You might think that the [built-in support for gracefully shutting down http servers](https://github.com/golang/go/issues/4674) is reason enough to be excited for the upcoming Go 1.8. It could also be the proposed [sub-millisecond GC pauses](https://groups.google.com/forum/m/#!topic/golang-dev/Ab1sFeoZg_8). Heck, if you’re having refactoring issues on a Google scale then it could be the [controversial](https://groups.google.com/d/msg/golang-dev/OmjsXkyOQpQ/EkERNkTeAgAJ) addition of [alias declarations](https://github.com/golang/proposal/blob/master/design/16339-alias-decls.md).

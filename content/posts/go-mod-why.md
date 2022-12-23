@@ -2,7 +2,7 @@
 title: "CVE-2021-32760 & Go Modules"
 date: 2021-09-27T16:57:17+01:00
 url: "go-mod-why"
-keywords: [technical, go]
+keywords: [technical, security, go]
 ---
 
 ![Screenshot of Dependabot alerts](/img/dependabot-alerts.png "Dependabot alerts")

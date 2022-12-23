@@ -2,6 +2,7 @@
 title: "Beware Firebase Project Limits"
 date: 2017-05-23T18:29:46+01:00
 url: "firebase-projects"
+keywords: [technical, cloud, firebase]
 ---
 
 Firebase is an incredible platform, some of their recent additions like [Cloud Functions for static hosting](https://firebase.google.com/docs/hosting/functions) are pretty amazing. However, I’d like to share a serious blindspot that I came across while preparing for a product launch.

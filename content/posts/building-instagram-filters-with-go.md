@@ -2,8 +2,7 @@
 title: "London Gophers - Building Instagram Filters With Go"
 date: 2019-05-15T17:31:01+01:00
 url: "instagram-filters"
-tags: ["Talk"]
-slides:
+keywords: [technical, go, london, gophers, talk]
 ---
 
 {{< youtube KVmDATg2mCE >}}
