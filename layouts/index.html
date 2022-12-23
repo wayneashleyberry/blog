@@ -16,15 +16,17 @@
 </head>
 
 <body>
-  <main class="container mx-auto">
-    <h1 class="font-bold mt-16 mb-8">Contents</h1>
+  <div class="container mx-auto">
+    <main class="m-4 md:m-0">
+      <h1 class="font-bold mt-16 mb-8">Contents</h1>
 
-    <ul class="font-serif">
-      {{ range where .Site.RegularPages "Section" "posts" }}
-        <li><a class="underline" href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ol>
-  </main>
+      <ul class="font-serif">
+        {{ range where .Site.RegularPages "Section" "posts" }}
+          <li><a class="underline" href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ol>
+    </main>
+  </div>
 
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""

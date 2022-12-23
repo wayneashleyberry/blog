@@ -24,24 +24,26 @@
 </head>
 
 <body>
-  <main class="container mx-auto">
-    <article class="mb-16">
-      <h1 class="font-bold mt-16 mb-8">{{ .Title }}</h1>
+  <div class="container mx-auto">
+    <main class="m-4 md:m-0">
+      <article class="mb-16">
+        <h1 class="font-bold mt-16 mb-8">{{ .Title }}</h1>
 
-      <div class="prose font-serif">{{ .Content }}</div>
-    </article>
+        <div class="prose font-serif">{{ .Content }}</div>
+      </article>
 
-    {{ $related := .Site.RegularPages.Related . | first 3 }}
+      {{ $related := .Site.RegularPages.Related . | first 3 }}
 
-    {{ with $related }}
-      <h1 class="font-bold mt-16 mb-8">Related Posts</h1>
-      <ul class="mb-16 font-serif">
-        {{ range . }}
-        <li><a class="underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-    {{ end }}
-  </main>
+      {{ with $related }}
+        <h1 class="font-bold mt-16 mb-8">Related Posts</h1>
+        <ul class="mb-16 font-serif">
+          {{ range . }}
+          <li><a class="underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </main>
+  </div>
 
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
