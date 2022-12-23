@@ -4,7 +4,7 @@ date: 2021-11-06T07:20:03+01:00
 url: "buildvcs"
 ---
 
-> This post was written before Go 1.18 was released, however I am keeping the code snippets up to date as the beta's and final release become available.
+_This post was written before Go 1.18 was released, I have tried to keep the example code up to date since the beta's and final release were released._
 
 It's been 5 years since I wrote about [the most exciting feature of Go 1.8](/default-gopath) and there have been significant improvements in the language, toolchain and ecosystem since then. I'm not going to cover any of that... Go 1.18 is around the corner, being set to release in February of 2022, and [the release notes](https://tip.golang.org/doc/go1.18) already describe a very exciting, albeit small, feature.
 
