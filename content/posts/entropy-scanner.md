@@ -5,7 +5,7 @@ url: "entropy-scanner"
 keywords: [technical, security, vscode, extension]
 ---
 
-![Screenshot of the Visual Studio Code extension in action](/img/entropy-scanner.png "Entropy Scanner")
+![Screenshot of the Visual Studio Code extension in action](img/entropy-scanner.png "Entropy Scanner")
 
 I have released my first extension for Visual Studio Code!
 
