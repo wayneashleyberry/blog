@@ -11,7 +11,7 @@ It's been 5 years since I wrote about [the most exciting feature of Go 1.8](/def
 
 Go 1.18 brings [generics](https://groups.google.com/g/golang-dev/c/iuB22_G9Kbo/m/7B1jd1I3BQAJ?pli=1), [fuzz testing](https://twitter.com/katie_hockman/status/1440082486692773897), [improved support for IP address types](https://tip.golang.org/doc/go1.18#netip) and [faster image drawing operations](https://tip.golang.org/doc/go1.18#image/draw) amongst other things. This is an impressive release, with the hype train definitely focusing on generics. However, the most exciting feature, for me at least, is that the version control information is going to automatically be embedded in compiled binaries.
 
-{{< tweet user="katie_hockman" id="1440082486692773897" >}}
+{{< x user="katie_hockman" id="1440082486692773897" >}}
 
 **_What is this useful for?_**
 
