@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ .Title }} - Wayne Ashley Berry</title>
+
+  {{ if hugo.IsProduction }}
+  {{ $css := resources.Get "css/input.css" }}
+  {{ $processedCSS := $css | resources.ExecuteAsTemplate "" . }}
+  {{ $secureCSS := $processedCSS | resources.Fingerprint "md5" }}
+  <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
+  {{ else }}
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  {{ end }}
+</head>
+
+<body>
+  <div class="container mx-auto">
+    <main class="m-4 md:m-0">
+      <h1 class="font-bold mt-16 mb-8">{{ .Title }}</h1>
+
+      <ul class="font-serif">
+        {{ range .Pages }}
+          <li><a class="underline" href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+
+      <p class="mt-8">
+        <a class="underline" href="/">Back to home</a>
+      </p>
+    </main>
+  </div>
+
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>
