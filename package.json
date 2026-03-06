@@ -13,7 +13,6 @@
     "watch:html": "hugo server -D",
     "prod:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.min.css --minify",
     "prod:html": "hugo --minify",
-    "prod:deploy": "firebase deploy",
     "preprod": "rm -rf public",
     "prod": "run-s \"prod:css\" \"prod:html\" \"prod:deploy\" --print-label"
   },
