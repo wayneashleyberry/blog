@@ -30,8 +30,16 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '18'
+
       - name: Install npm dependencies
         run: npm ci
+
+      - name: Build CSS with Tailwind
+        run: npm run prod:css
 
       - name: Build with Hugo
         run: hugo --minify

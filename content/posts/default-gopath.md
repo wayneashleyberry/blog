@@ -31,6 +31,6 @@ go get github.com/foo/bar
 
 Go 1.8 is going to be a great release which will continue to push the language, runtime and toolchain forward. If you’re as excited as me then you can keep an eye on progress using the [Go 1.8 GitHub milestone](https://github.com/golang/go/milestone/38).
 
-{{< tweet user="francesc" id="791079293447057408" >}}
+{{< x user="francesc" id="791079293447057408" >}}
 
 Special thanks to [Francesc Campoy](https://twitter.com/francesc) for [implementing this feature](https://twitter.com/francesc/status/791079293447057408) 💖
