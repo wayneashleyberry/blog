@@ -1,4 +1,4 @@
-baseURL = 'https://wayneashleyberry.com/'
+baseURL = 'https://wayneashleyberry.github.io/blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 [markup]
