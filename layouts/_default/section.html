@@ -11,7 +11,7 @@
   {{ $secureCSS := $css | resources.Fingerprint "md5" }}
   <link href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" rel="stylesheet">
   {{ else }}
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   {{ end }}
 </head>
 
