@@ -11,3 +11,8 @@ title = 'My New Hugo Site'
 [[related.indices]]
   name = 'keywords'
   weight = 100
+[markup.goldmark.renderHooks.image]
+  enableDefault = true
+
+[markup.goldmark.renderHooks.link]
+  enableDefault = true
