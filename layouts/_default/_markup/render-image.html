@@ -1,0 +1,1 @@
+<img src="{{ (printf "%s%s" .Page.Site.BaseURL (.Destination | strings.TrimPrefix "/")) }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} />

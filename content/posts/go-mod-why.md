@@ -7,7 +7,7 @@ keywords: [technical, security, go]
 
 I wanted to share a quick story of [CVE-2021-32760](https://github.com/advisories/GHSA-c72p-9xmj-rx3w) and how it relates to some of the lesser-known intricacies of [Go Modules](https://go.dev/blog/using-go-modules). I was working on a project when I noticed the dreaded Security tab had found something!
 
-![Screenshot of Dependabot alerts](img/dependabot-alerts.png "Dependabot alerts")
+![Screenshot of Dependabot alerts](/img/dependabot-alerts.png "Dependabot alerts")
 
 The Security overview listed a single Dependabot alert, how odd — I'm normally very good at keeping my dependencies up to date. The GitHub Advisory Database has a [page describing the vulnerability](https://github.com/advisories/GHSA-c72p-9xmj-rx3w). Just to be clear, this is not an issue with Go itself — but rather a specific version of an open source module. It's not even a serious issue, but considering it was the only blemish on my otherwise clean record I wanted to fix it!
 
